@@ -12,13 +12,21 @@
     </ion-col>
 
     <!-- Horizontal scroll view -->
-    <ion-slides [options]="opts">
+<!--    <ion-slides [options]="opts">
       <ion-slide *ngFor="let album of entry.albums" tappable (click)="openAlbum(album)">
         <img [src]="'/assets/images/albums/'+dasherize(album.image)+'.jpg'">
         <span class="title">{{ album.title }}</span>
       </ion-slide>
 
-    </ion-slides>
+    </ion-slides>-->
+
+    <swiper-container [slidesPerView]="2.4" [slidesOffsetBefore]="20" [spaceBetween]="20" [freeMode]="true">
+      <swiper-slide *ngFor="let album of entry.albums" tappable (click)="openAlbum(album)">
+        <img [src]="'/assets/images/albums/'+dasherize(album.image)+'.jpg'">
+        <span class="title">{{ album.title }}</span>
+      </swiper-slide>
+
+    </swiper-container>
   </ion-row>
 
 </ion-content>

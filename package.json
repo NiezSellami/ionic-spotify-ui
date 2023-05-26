@@ -32,6 +32,7 @@
     "@ionic/angular-server": "^7.0.9",
     "@ionic/core": "^6.7.4",
     "rxjs": "^7.5.0",
+    "swiper": "^9.3.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.13.0"
   },
