@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
-import { SplashScreen } from '@awesome-cordova-plugins/splash-screen/ngx';
-import { StatusBar } from '@awesome-cordova-plugins/status-bar/ngx';
 import { register } from 'swiper/element/bundle';
-
+import { SplashScreen } from '@capacitor/splash-screen';
+import {StatusBar} from '@capacitor/status-bar';
 register();
 @Component({
   selector: 'app-root',
@@ -14,16 +13,14 @@ register();
 export class AppComponent {
   constructor(
     private platform: Platform,
-    private splashScreen: SplashScreen,
-    private statusBar: StatusBar
   ) {
     this.initializeApp();
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      //StatusBar.setStyle();
+      SplashScreen.hide();
     });
   }
 }
