@@ -24,15 +24,15 @@ const routes: Routes = [
         loadChildren: () => import('../album/album.module').then( m => m.AlbumPageModule)
       },
       {
-        path: '',
-        redirectTo: '/tabs/tab1',
+        path: 'home',
+        redirectTo: '/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/home',
     pathMatch: 'full'
   }
 ];
