@@ -1,13 +1,37 @@
 <ion-header>
   <ion-toolbar color="dark">
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="globe-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="settings-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title color="light">I MAKAM</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="funnel-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
 
 <ion-content [fullscreen]="true">
   <h6 class="ion-padding" >LIBRARY</h6>
   <ion-list [inset]="true" lines="none">
-    <ion-item button>
+    <ion-item button [routerLink]="['/song-editor']">
       <ion-icon name="musical-note" slot="start" size="small" ></ion-icon>
       <ion-label>Songs</ion-label>
       <ion-label slot="end" class="item-count-label">1200</ion-label>

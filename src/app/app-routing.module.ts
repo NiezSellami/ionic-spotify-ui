@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'song-editor',
+    loadChildren: () => import('./song-editor/song-editor.module').then( m => m.SongEditorPageModule)
   }
 ];
 @NgModule({
