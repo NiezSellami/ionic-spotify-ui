@@ -14,3 +14,18 @@ ion-footer{
     }
   }
 }
+
+.block {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  ion-modal {
+    --ion-background-color: var(--ion-color-dark);
+    --height: auto;
+    position: absolute;
+    bottom: 58px;
+  }

@@ -21,6 +21,15 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-modal trigger="open-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+    <ng-template>
+      <div class="block">Block of Content</div>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+
 <ion-footer>
   <ion-toolbar color="dark" >
     <ion-buttons>
@@ -47,7 +56,7 @@
             </ion-button>
           </ion-col>
           <ion-col >
-            <ion-button expand="full" >
+            <ion-button expand="full" id="open-modal">
               <ion-icon slot="icon-only" ios="grid-outline" ></ion-icon>
             </ion-button>
           </ion-col>
@@ -56,4 +65,3 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>
-<ion-content [fullscreen]="true"></ion-content>
