@@ -32,7 +32,11 @@
             ],
             "styles": [
               {
-                "input": "src/theme/variables.scss",
+                "input": "src/theme/dark.css",
+                "inject": true
+              },
+              {
+                "input": "src/theme/default.css",
                 "inject": true
               },
               {

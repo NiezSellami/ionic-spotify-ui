@@ -21,6 +21,7 @@ export class AppComponent {
     this.platform.ready().then(() => {
       //StatusBar.setStyle();
       SplashScreen.hide();
+      document.body.classList.toggle('dark');
     });
   }
 }

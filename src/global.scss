@@ -10,27 +10,38 @@
  */
 
 /* Core CSS required for Ionic components to work properly */
-@import "~@ionic/angular/css/core.css";
+@import "~@ionic/core/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
-@import "~@ionic/angular/css/normalize.css";
-@import "~@ionic/angular/css/structure.css";
-@import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/core/css/normalize.css";
+@import "~@ionic/core/css/structure.css";
+@import "~@ionic/core/css/typography.css";
 
 /* Optional CSS utils that can be commented out */
-@import "~@ionic/angular/css/padding.css";
-//@import "~@ionic/angular/css/float-elements.css";
-@import "~@ionic/angular/css/text-alignment.css";
-@import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
+@import "~@ionic/core/css/padding.css";
+@import "~@ionic/core/css/float-elements.css";
+@import "~@ionic/core/css/text-alignment.css";
+@import "~@ionic/core/css/text-transformation.css";
+@import "~@ionic/core/css/flex-utils.css";
 
 
-ion-content {
-  --background: var(--ion-color-dark);
-}
+/*
+ * Theme CSS
+ * ----------------------------------------------------------------------------
+ * Imports theme files that can be used to theme an application.
+ */
 
-@font-face {
+@import "./theme/default.css";
+@import "./theme/dark.css";
+
+
+/*
+ * Global CSS
+ * ----------------------------------------------------------------------------
+ * CSS to apply throughout the application.
+ */
+
+ @font-face {
   font-family: 'Spotify';
   font-style: normal;
   font-weight: normal;
@@ -47,4 +58,19 @@ ion-content {
   font-family: 'Spotify';
   font-weight: 100;
   src: url('/assets/fonts/spotify-light.ttf');
+}
+
+.component-content {
+  --background: var(--ion-color-step-50, #f2f2f7);
+}
+
+/*
+ * When placed inside of an element with a background/border color
+ * the backdrop-filter is blurring it into the header in Safari
+ * https://bugs.webkit.org/show_bug.cgi?id=168418
+ */
+
+_::-webkit-full-page-media, _:future ion-header .header-background,
+:root .safari_only ion-header .header-background {
+  backdrop-filter: none !important;
 }
