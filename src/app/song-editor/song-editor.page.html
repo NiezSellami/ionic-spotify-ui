@@ -35,6 +35,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
   <ion-modal #modal [isOpen]="isModalOpen" [initialBreakpoint]="1" [breakpoints]="[0, 1]" (didDismiss)="checkModal()">
     <ng-template>
       <ion-header>
@@ -42,32 +43,98 @@
           <ion-title color="light">Transposition</ion-title>
         </ion-toolbar>
       </ion-header>
+        <ion-grid [fixed]="true">
+          <ion-row>
+            <ion-col>
+              <ion-button  style="height: 90px;width: 90px">
+                <p>C</p>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button  style="height: 90px;width: 90px">
+                <p>D<sup>b</sup></p>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button  style="height: 90px;width: 90px">
+                <p>D</p>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button  style="height: 90px;width: 90px">
+                <p>E<sup>b</sup></p>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button  style="height: 90px;width: 90px">
+                <p>E</p>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button  style="height: 90px;width: 90px">
+                <p>F</p>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button  style="height: 90px;width: 90px">
+                <p>G<sup>b</sup></p>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button  style="height: 90px;width: 90px">
+                <p>G</p>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button  style="height: 90px;width: 90px">
+                <p>A<sup>b</sup></p>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button  style="height: 90px;width: 90px">
+                <p>A</p>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button  style="height: 90px;width: 90px">
+                <p>B<sup>b</sup></p>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button  style="height: 90px;width: 90px">
+                <p>B</p>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       <ion-footer>
-        <ion-toolbar color="dark">
+        <ion-toolbar color="dark" >
           <ion-buttons>
-            <ion-grid [fixed]="true">
-              <ion-row>
-                <ion-col >
-                  <ion-button expand="full" [routerLink]="['/home']" routerDirection="back"> 
-                    <ion-icon slot="icon-only" ios="home" ></ion-icon>
-                  </ion-button>
+            <ion-grid [fixed]="true" style="--ion-grid-padding: 0px;">
+              <ion-row >
+                <ion-col style="height: 20px; display: flex; justify-content: center; align-items: center;">
+                  <ion-button id="open-bpm" size="small" expand="full" style="height: 20px;">{{bpmValue.text}}</ion-button>
+                  <ion-picker trigger="open-bpm" [columns]="bpmPicker" [buttons]="bpmButtons"></ion-picker>
                 </ion-col>
-                <ion-col >
-                <ion-button expand="full">
-                    <ion-icon slot="icon-only" ios="stop" ></ion-icon>
-                  </ion-button>
+                <ion-col style="height: 20px; display: flex; justify-content: center; align-items: center;">
+                  <ion-button id="open-speed" size="small" expand="full" style="height: 20px;">{{speedValue.text}}</ion-button>
+                  <ion-picker trigger="open-speed" [columns]="speedPicker" [buttons]="speedButtons"></ion-picker>
                 </ion-col>
-                <ion-col >
-                  <ion-button expand="full" [routerLink]="['/home']" routerDirection="back"> 
-                    <ion-icon slot="icon-only" ios="home" ></ion-icon>
-                  </ion-button>
+                <ion-col style="height: 20px; display: flex; justify-content: center; align-items: center;">
+                  <ion-button id="open-major" size="small" expand="full" style="height: 20px;">{{majorValue.text}}</ion-button>
+                  <ion-picker trigger="open-major" [columns]="majorPicker" [buttons]="majorButtons"></ion-picker>
                 </ion-col>
               </ion-row>
-              <ion-row>
-                <ion-col >
-                  <ion-button expand="full" [routerLink]="['/home']" routerDirection="back"> 
-                    <ion-icon slot="icon-only" ios="home" ></ion-icon>
-                  </ion-button>
+              <ion-row >
+                <ion-col style="height: 20px; display: flex; justify-content: center; align-items: center;">
+                  <ion-button id="open-picker" size="small" expand="full" style="height: 20px;">Open</ion-button>
+                  <ion-picker trigger="open-picker" [columns]="bpmPicker" [buttons]="bpmButtons"></ion-picker>
                 </ion-col>
               </ion-row>
             </ion-grid>
