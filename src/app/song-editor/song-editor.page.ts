@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-song-editor',
@@ -118,7 +119,7 @@ export class SongEditorPage implements OnInit {
     text: 'EB major',
     value: 'EB',
   };
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2,private modalController: ModalController) { }
 
   ngOnInit() {
   }
@@ -130,5 +131,8 @@ export class SongEditorPage implements OnInit {
   checkModal(){
     this.isModalOpen==true?this.setOpen(false):null;
   }
-  
+  dismissModal() {
+    this.modalController.dismiss();
+    this.isModalOpen=false;
+  }
 }

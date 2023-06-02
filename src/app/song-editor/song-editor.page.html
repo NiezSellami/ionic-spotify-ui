@@ -151,22 +151,22 @@
       <ion-grid [fixed]="true">
         <ion-row>
           <ion-col >
-            <ion-button expand="full" [routerLink]="['/home']" routerDirection="back"> 
+            <ion-button expand="full" [routerLink]="['/home']" routerDirection="back" (click)="dismissModal()">
               <ion-icon slot="icon-only" ios="home" ></ion-icon>
             </ion-button>
           </ion-col>
           <ion-col >
-          <ion-button expand="full">
+          <ion-button expand="full" (click)="dismissModal()">
               <ion-icon slot="icon-only" ios="stop" ></ion-icon>
             </ion-button>
           </ion-col>
           <ion-col >
-            <ion-button expand="full">
+            <ion-button expand="full" (click)="dismissModal()">
               <ion-icon slot="icon-only" ios="play" style="font-size: 40px;"></ion-icon>
             </ion-button>
           </ion-col>
           <ion-col >
-            <ion-button expand="full">
+            <ion-button expand="full" (click)="dismissModal()">
               <ion-icon slot="icon-only" ios="options-outline" ></ion-icon>
             </ion-button>
           </ion-col>
