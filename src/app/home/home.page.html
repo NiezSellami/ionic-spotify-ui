@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="globe-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="cog-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="light">I MAKAM</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="funnel-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+
+<ion-content [fullscreen]="true">
+  <h6 class="ion-padding" >LIBRARY</h6>
+  <ion-list [inset]="true" lines="none">
+    <ion-item button [routerLink]="['/song-editor']">
+      <ion-icon name="musical-note" slot="start" size="small" ></ion-icon>
+      <ion-label>Songs</ion-label>
+      <ion-label slot="end" class="item-count-label">1200</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon name="musical-notes"  slot="start" size="small"></ion-icon>
+      <ion-label>Styles</ion-label>
+      <ion-label slot="end" class="item-count-label">85</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon name="time" slot="start" size="small"></ion-icon>
+      <ion-label>Last Viewed</ion-label>
+      <ion-label slot="end" class="item-count-label">300</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon name="download" slot="start" size="small"></ion-icon>
+      <ion-label>Last Imported</ion-label>
+      <ion-label slot="end" class="item-count-label">0</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon name="create" slot="start" size="small"></ion-icon>
+      <ion-label>Last Edited</ion-label>
+      <ion-label slot="end" class="item-count-label">10</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-icon name="trash" slot="start" size="small"></ion-icon>
+      <ion-label>Trash</ion-label>
+      <ion-label slot="end" class="item-count-label">0</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <h6 class="ion-padding" style="padding-top: 20px;" >PLAYLISTS</h6>
+  <ion-list [inset]="true" lines="none">
+    <ion-item button>
+      <ion-label>Ajam</ion-label>
+      <ion-label slot="end" class="item-count-label">0</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-label>Bayat</ion-label>
+      <ion-label slot="end" class="item-count-label">0</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-label>Hijaz</ion-label>
+      <ion-label slot="end" class="item-count-label">0</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-label>Kurd</ion-label>
+      <ion-label slot="end" class="item-count-label">0</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-label>Nahawand</ion-label>
+      <ion-label slot="end" class="item-count-label">0</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-label>Rast</ion-label>
+      <ion-label slot="end" class="item-count-label">0</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-label>Saba</ion-label>
+      <ion-label slot="end" class="item-count-label">0</ion-label>
+    </ion-item>
+    <ion-item button>
+      <ion-label>Seka</ion-label>
+      <ion-label slot="end" class="item-count-label">0</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

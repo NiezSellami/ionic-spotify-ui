@@ -27,15 +27,8 @@ export class Tab1Page {
     }
   ];
 
-  opts = {
-    slidesPerView: 2.4,
-    slidesOffsetBefore: 20,
-    spaceBetween: 20,
-    freeMode: true
-  };
-  
   constructor(private router: Router) {
-    
+
   }
 
   openAlbum(album) {
@@ -44,8 +37,8 @@ export class Tab1Page {
   }
 
   // Helper function for image names
-  dasherize(string) {
-    return string.replace(/[A-Z]/g, function(char, index) {
+  dasherize(str: string) {
+    return str.replace(/[A-Z]/g, function(char, index) {
       return (index !== 0 ? '-' : '') + char.toLowerCase();
     });
   };

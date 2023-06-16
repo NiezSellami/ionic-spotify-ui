@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
-
+import { register } from 'swiper/element/bundle';
+import { SplashScreen } from '@capacitor/splash-screen';
+import {StatusBar} from '@capacitor/status-bar';
+register();
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -12,16 +13,15 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   constructor(
     private platform: Platform,
-    private splashScreen: SplashScreen,
-    private statusBar: StatusBar
   ) {
     this.initializeApp();
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      //StatusBar.setStyle();
+      SplashScreen.hide();
+      document.body.classList.toggle('dark');
     });
   }
 }

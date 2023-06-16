@@ -1,0 +1,36 @@
+ion-header{
+    ion-toolbar {
+    ion-icon {
+        color: var(--ion-color-primary);
+        font-size: 23px;
+    }
+  }
+}
+ion-footer{
+    ion-toolbar {
+    ion-icon {
+        color: var(--ion-color-primary);
+        font-size: 23px;
+    }
+  }
+}
+
+.block {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  ion-modal {
+    --ion-background-color: var(--ion-color-dark);
+    --height: auto;
+    position: absolute;
+  }
+
+
+  p {
+    font-family: 'Spotify';
+    color: white;
+}

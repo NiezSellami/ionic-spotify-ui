@@ -1,7 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "defaultProject": "app",
   "newProjectRoot": "projects",
   "projects": {
     "app": {
@@ -33,10 +32,16 @@
             ],
             "styles": [
               {
-                "input": "src/theme/variables.scss"
+                "input": "src/theme/dark.css",
+                "inject": true
               },
               {
-                "input": "src/global.scss"
+                "input": "src/theme/default.css",
+                "inject": true
+              },
+              {
+                "input": "src/global.scss",
+                "inject": true
               }
             ],
             "scripts": []
@@ -52,7 +57,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -80,9 +84,7 @@
             "production": {
               "browserTarget": "app:build:production"
             },
-            "ci": {
-              "progress": false
-            }
+            "ci": {}
           }
         },
         "extract-i18n": {
@@ -120,17 +122,6 @@
             }
           }
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
@@ -145,36 +136,14 @@
               "devServerTarget": "app:serve:ci"
             }
           }
-        },
-        "ionic-cordova-build": {
-          "builder": "@ionic/angular-toolkit:cordova-build",
-          "options": {
-            "browserTarget": "app:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "app:build:production"
-            }
-          }
-        },
-        "ionic-cordova-serve": {
-          "builder": "@ionic/angular-toolkit:cordova-serve",
-          "options": {
-            "cordovaBuildTarget": "app:ionic-cordova-build",
-            "devServerTarget": "app:serve"
-          },
-          "configurations": {
-            "production": {
-              "cordovaBuildTarget": "app:ionic-cordova-build:production",
-              "devServerTarget": "app:serve:production"
-            }
-          }
         }
       }
     }
   },
   "cli": {
-    "defaultCollection": "@ionic/angular-toolkit"
+    "schematicCollections": [
+      "@ionic/angular-toolkit"
+    ]
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
